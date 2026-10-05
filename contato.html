@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InfoBrasil Contato — Envie sugestões de pauta, fale com a redação, anuncie ou tire suas dúvidas." />
+  <title>Contato — InfoBrasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="InfoBrasil — Página inicial">
+        <div class="logo__icone" aria-hidden="true">IB</div>
+        <span class="logo__texto">Info<span>Brasil</span></span>
+      </a>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul class="nav-principal__lista" role="list">
+          <li><a href="index.html" class="nav-principal__link">🏠 Início</a></li>
+          <li><a href="noticias.html" class="nav-principal__link">📰 Notícias</a></li>
+          <li><a href="economia.html" class="nav-principal__link">📈 Economia</a></li>
+          <li><a href="esportes.html" class="nav-principal__link">⚽ Esportes</a></li>
+          <li><a href="tecnologia.html" class="nav-principal__link">💻 Tecnologia</a></li>
+          <li><a href="politica.html" class="nav-principal__link">🏛️ Política</a></li>
+          <li><a href="cultura.html" class="nav-principal__link">🎭 Cultura</a></li>
+          <li><a href="mundo.html" class="nav-principal__link">🌍 Mundo</a></li>
+          <li><a href="educacao.html" class="nav-principal__link">🎓 Educação</a></li>
+          <li><a href="contato.html" class="nav-principal__link ativo" aria-current="page">✉️ Contato</a></li>
+          <li><a href="admin.html" class="nav-principal__link nav-principal__link--admin">⚙️ CMS</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-acoes">
+        <button id="btn-busca" class="btn-busca" aria-label="Abrir busca" title="Buscar notícias">🔍</button>
+        <button id="btn-tema" class="btn-tema" aria-label="Mudar tema" title="Mudar tema">🌙</button>
+        <button id="btn-hamburguer" class="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="overlay-busca" class="overlay-busca" role="dialog" aria-modal="true" aria-label="Buscar notícias" aria-hidden="true">
+    <div class="overlay-busca__caixa">
+      <button id="btn-fechar-busca" class="overlay-busca__fechar" aria-label="Fechar busca">✕</button>
+      <p class="overlay-busca__titulo">Buscar notícias</p>
+      <div class="overlay-busca__campo">
+        <input
+          id="input-busca-global"
+          class="overlay-busca__input"
+          type="search"
+          placeholder="Digite um assunto ou palavra-chave..."
+          autocomplete="off"
+          aria-label="Campo de busca"
+        />
+        <button class="overlay-busca__btn-enviar" aria-label="Buscar">🔍</button>
+      </div>
+      <div id="busca-resultados" class="busca-resultados" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="conteudo-principal">
+    <section class="secao-principal">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Você está em:">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Fale Conosco</span>
+        </nav>
+
+        <h1 class="secao-titulo">Fale com a Redação</h1>
+
+        <div class="layout-com-sidebar">
+          <div>
+            <form id="form-contato" class="form-contato" novalidate>
+              <h2 class="form-titulo-secundario">
+                Envie sua Mensagem ou Sugestão de Pauta
+              </h2>
+
+              <div class="form-grid">
+                <div class="form-grupo">
+                  <label for="contato-nome" class="form-rotulo">Nome completo *</label>
+                  <input
+                    type="text"
+                    id="contato-nome"
+                    class="form-input"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+
+                <div class="form-grupo">
+                  <label for="contato-email" class="form-rotulo">E-mail corporativo ou pessoal *</label>
+                  <input
+                    type="email"
+                    id="contato-email"
+                    class="form-input"
+                    placeholder="seuemail@exemplo.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-grupo">
+                  <label for="contato-telefone" class="form-rotulo">Telefone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="contato-telefone"
+                    class="form-input"
+                    placeholder="(11) 99999-9999"
+                  />
+                </div>
+
+                <div class="form-grupo">
+                  <label for="contato-assunto" class="form-rotulo">Assunto *</label>
+                  <select id="contato-assunto" class="form-select" required>
+                    <option value="">Selecione um departamento</option>
+                    <option value="pauta">Sugestão de Pauta / Notícia</option>
+                    <option value="correcao">Correção de Matéria (Erramos)</option>
+                    <option value="comercial">Comercial & Publicidade</option>
+                    <option value="ouvidoria">Ouvidoria & Feedback</option>
+                    <option value="outro">Outro Assunto</option>
+                  </select>
+                </div>
+
+                <div class="form-grupo form-grupo--full">
+                  <label for="contato-mensagem" class="form-rotulo">Mensagem / Detalhes da pauta *</label>
+                  <textarea
+                    id="contato-mensagem"
+                    class="form-textarea"
+                    placeholder="Escreva sua mensagem com clareza e riqueza de detalhes..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-botoes-linha">
+                <button type="reset" class="btn-secundario">Limpar Campos</button>
+                <button type="submit" class="btn-primario">Enviar Mensagem ✉️</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="sidebar">
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Canais Diretos</h2>
+              <div class="contato-info-bloco">
+                <p><strong>Redação Central:</strong></p>
+                <p class="contato-info-texto">redacao@infobrasil.com.br</p>
+                <p class="contato-info-espaco"><strong>Comercial & Anúncios:</strong></p>
+                <p class="contato-info-texto">comercial@infobrasil.com.br</p>
+                <p class="contato-info-espaco"><strong>Telefone Geral:</strong></p>
+                <p class="contato-info-texto">(11) 3200-8800</p>
+                <p class="contato-info-espaco"><strong>Sede:</strong></p>
+                <p class="contato-info-texto">Av. Paulista, 1500 — Bela Vista, São Paulo - SP</p>
+              </div>
+            </div>
+
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Acesso Administrativo</h2>
+              <p class="sidebar-destaque-texto sidebar-paragrafo">
+                Membro da redação ou editor? Acesse a área de gerenciamento de notícias.
+              </p>
+              <a href="admin.html" class="btn-primario btn-largura-total">Acessar CMS ⚙️</a>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grade">
+      <div>
+        <p class="footer-logo">Info<span>Brasil</span></p>
+        <p class="footer-descricao">
+          Jornalismo independente, ágil e comprometido com os fatos. Cobertura diária em múltiplos canais.
+        </p>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 1 a 5</p>
+        <ul class="footer-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="economia.html">Economia</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="politica.html">Política</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 6 a 10</p>
+        <ul class="footer-lista">
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="mundo.html">Mundo</a></li>
+          <li><a href="educacao.html">Educação</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="admin.html">Área CMS (Admin)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Institucional</p>
+        <ul class="footer-lista">
+          <li><a href="contato.html">Fale com a Redação</a></li>
+          <li><a href="admin.html">Painel de Controle</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rodape">
+      <p>© 2026 InfoBrasil. Todos os direitos reservados.</p>
+      <p>Desenvolvido com HTML5 semântico, CSS3 e JavaScript puro.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

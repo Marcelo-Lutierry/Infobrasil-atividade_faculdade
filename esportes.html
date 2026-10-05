@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InfoBrasil Esportes — Classificação, resultados, jogos ao vivo e notícias de futebol e demais modalidades." />
+  <title>Esportes — InfoBrasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="ticker-urgente" role="marquee" aria-label="Placar esportivo">
+    <div class="ticker-urgente__inner">
+      <span class="ticker-urgente__label">Ao Vivo</span>
+      <div class="ticker-urgente__faixa">
+        <span class="ticker-urgente__texto">
+          Brasil 2 x 0 Argentina (Fim de jogo) &nbsp;•&nbsp;
+          Flamengo 1 x 1 Palmeiras (2º Tempo) &nbsp;•&nbsp;
+          São Paulo 2 x 1 Grêmio &nbsp;•&nbsp;
+          Corinthians 0 x 0 Santos &nbsp;•&nbsp;
+          Vôlei Masculino: Brasil avança às semifinais do Mundial
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="InfoBrasil — Página inicial">
+        <div class="logo__icone" aria-hidden="true">IB</div>
+        <span class="logo__texto">Info<span>Brasil</span></span>
+      </a>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul class="nav-principal__lista" role="list">
+          <li><a href="index.html" class="nav-principal__link">🏠 Início</a></li>
+          <li><a href="noticias.html" class="nav-principal__link">📰 Notícias</a></li>
+          <li><a href="economia.html" class="nav-principal__link">📈 Economia</a></li>
+          <li><a href="esportes.html" class="nav-principal__link ativo" aria-current="page">⚽ Esportes</a></li>
+          <li><a href="tecnologia.html" class="nav-principal__link">💻 Tecnologia</a></li>
+          <li><a href="politica.html" class="nav-principal__link">🏛️ Política</a></li>
+          <li><a href="cultura.html" class="nav-principal__link">🎭 Cultura</a></li>
+          <li><a href="mundo.html" class="nav-principal__link">🌍 Mundo</a></li>
+          <li><a href="educacao.html" class="nav-principal__link">🎓 Educação</a></li>
+          <li><a href="contato.html" class="nav-principal__link">✉️ Contato</a></li>
+          <li><a href="admin.html" class="nav-principal__link nav-principal__link--admin">⚙️ CMS</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-acoes">
+        <button id="btn-busca" class="btn-busca" aria-label="Abrir busca" title="Buscar notícias">🔍</button>
+        <button id="btn-tema" class="btn-tema" aria-label="Mudar tema" title="Mudar tema">🌙</button>
+        <button id="btn-hamburguer" class="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="overlay-busca" class="overlay-busca" role="dialog" aria-modal="true" aria-label="Buscar notícias" aria-hidden="true">
+    <div class="overlay-busca__caixa">
+      <button id="btn-fechar-busca" class="overlay-busca__fechar" aria-label="Fechar busca">✕</button>
+      <p class="overlay-busca__titulo">Buscar notícias</p>
+      <div class="overlay-busca__campo">
+        <input
+          id="input-busca-global"
+          class="overlay-busca__input"
+          type="search"
+          placeholder="Digite um assunto ou palavra-chave..."
+          autocomplete="off"
+          aria-label="Campo de busca"
+        />
+        <button class="overlay-busca__btn-enviar" aria-label="Buscar">🔍</button>
+      </div>
+      <div id="busca-resultados" class="busca-resultados" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="conteudo-principal">
+    <section class="secao-principal">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Você está em:">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Esportes</span>
+        </nav>
+
+        <h1 class="secao-titulo">Cobertura Esportiva</h1>
+
+        <div class="layout-com-sidebar">
+          <div>
+            <div class="grade-noticias--duas grade-noticias">
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/esportes.jpg" alt="Seleção Brasileira comemorando vitória" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--esportes">Seleção Brasileira</span>
+                  <h2 class="card-noticia__titulo">Seleção garante vaga na Copa com vitória convincente por 2 a 0</h2>
+                  <p class="card-noticia__resumo">Com dois gols nos primeiros 20 minutos, equipe carimba classificação antecipada com 100% de aproveitamento.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Carlos Lima · 04/10/2026</span>
+                    <a href="noticia.html?id=2" class="card-noticia__link">Ler mais →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/esportes.jpg" alt="Gramado iluminado de estádio" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--esportes">Campeonato Nacional</span>
+                  <h2 class="card-noticia__titulo">Reta final do Brasileirão: briga acirrada esquenta o topo da tabela</h2>
+                  <p class="card-noticia__resumo">Líder e vice-líder se enfrentam em confronto direto decisivo com ingressos totalmente esgotados.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Carlos Lima · 30/09/2026</span>
+                    <a href="noticia.html?id=10" class="card-noticia__link">Ler mais →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/hero.jpg" alt="Arena poliesportiva" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--esportes">Olimpíadas</span>
+                  <h2 class="card-noticia__titulo">Brasil bate recorde de medalhas nos Jogos Pan-Americanos</h2>
+                  <p class="card-noticia__resumo">Delegação nacional conquista 42 ouros em modalidades individuais e por equipe.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Carlos Lima · 28/09/2026</span>
+                    <a href="noticia.html?id=2" class="card-noticia__link">Ler mais →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/esportes.jpg" alt="Vôlei brasileiro" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--esportes">Vôlei</span>
+                  <h2 class="card-noticia__titulo">Vôlei brasileiro vence batalha de 5 sets e avança no Mundial</h2>
+                  <p class="card-noticia__resumo">Com virada eletrizante no tie-break, seleção masculina carimba vaga entre os quatro melhores.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Carlos Lima · 27/09/2026</span>
+                    <a href="noticia.html?id=2" class="card-noticia__link">Ler mais →</a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <aside class="sidebar">
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Classificação Série A</h2>
+              <table class="tabela-esportes" aria-label="Tabela do Campeonato">
+                <thead>
+                  <tr>
+                    <th>Pos</th>
+                    <th>Clube</th>
+                    <th>Pts</th>
+                    <th>J</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1º</strong></td>
+                    <td>Palmeiras</td>
+                    <td><strong>68</strong></td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2º</strong></td>
+                    <td>Flamengo</td>
+                    <td><strong>66</strong></td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3º</strong></td>
+                    <td>Botafogo</td>
+                    <td><strong>62</strong></td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4º</strong></td>
+                    <td>Atlético-MG</td>
+                    <td><strong>58</strong></td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <td><strong>5º</strong></td>
+                    <td>São Paulo</td>
+                    <td><strong>55</strong></td>
+                    <td>31</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Próximos Jogos</h2>
+              <div class="card-mini">
+                <div>
+                  <p class="card-mini__titulo">Palmeiras x Flamengo</p>
+                  <p class="card-mini__data">Domingo · 16:00 · Allianz Parque</p>
+                </div>
+              </div>
+              <div class="card-mini">
+                <div>
+                  <p class="card-mini__titulo">Corinthians x São Paulo</p>
+                  <p class="card-mini__data">Domingo · 18:30 · Neo Química Arena</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grade">
+      <div>
+        <p class="footer-logo">Info<span>Brasil</span></p>
+        <p class="footer-descricao">
+          Jornalismo independente, ágil e comprometido com os fatos. Cobertura diária em múltiplos canais.
+        </p>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 1 a 5</p>
+        <ul class="footer-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="economia.html">Economia</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="politica.html">Política</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 6 a 10</p>
+        <ul class="footer-lista">
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="mundo.html">Mundo</a></li>
+          <li><a href="educacao.html">Educação</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="admin.html">Área CMS (Admin)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Institucional</p>
+        <ul class="footer-lista">
+          <li><a href="contato.html">Fale com a Redação</a></li>
+          <li><a href="admin.html">Painel de Controle</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rodape">
+      <p>© 2026 InfoBrasil. Todos os direitos reservados.</p>
+      <p>Desenvolvido com HTML5 semântico, CSS3 e JavaScript puro.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InfoBrasil Cultura — Cinema, música, artes plásticas, literatura, espetáculos e tendências criativas." />
+  <title>Cultura — InfoBrasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="InfoBrasil — Página inicial">
+        <div class="logo__icone" aria-hidden="true">IB</div>
+        <span class="logo__texto">Info<span>Brasil</span></span>
+      </a>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul class="nav-principal__lista" role="list">
+          <li><a href="index.html" class="nav-principal__link">🏠 Início</a></li>
+          <li><a href="noticias.html" class="nav-principal__link">📰 Notícias</a></li>
+          <li><a href="economia.html" class="nav-principal__link">📈 Economia</a></li>
+          <li><a href="esportes.html" class="nav-principal__link">⚽ Esportes</a></li>
+          <li><a href="tecnologia.html" class="nav-principal__link">💻 Tecnologia</a></li>
+          <li><a href="politica.html" class="nav-principal__link">🏛️ Política</a></li>
+          <li><a href="cultura.html" class="nav-principal__link ativo" aria-current="page">🎭 Cultura</a></li>
+          <li><a href="mundo.html" class="nav-principal__link">🌍 Mundo</a></li>
+          <li><a href="educacao.html" class="nav-principal__link">🎓 Educação</a></li>
+          <li><a href="contato.html" class="nav-principal__link">✉️ Contato</a></li>
+          <li><a href="admin.html" class="nav-principal__link nav-principal__link--admin">⚙️ CMS</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-acoes">
+        <button id="btn-busca" class="btn-busca" aria-label="Abrir busca" title="Buscar notícias">🔍</button>
+        <button id="btn-tema" class="btn-tema" aria-label="Mudar tema" title="Mudar tema">🌙</button>
+        <button id="btn-hamburguer" class="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="overlay-busca" class="overlay-busca" role="dialog" aria-modal="true" aria-label="Buscar notícias" aria-hidden="true">
+    <div class="overlay-busca__caixa">
+      <button id="btn-fechar-busca" class="overlay-busca__fechar" aria-label="Fechar busca">✕</button>
+      <p class="overlay-busca__titulo">Buscar notícias</p>
+      <div class="overlay-busca__campo">
+        <input
+          id="input-busca-global"
+          class="overlay-busca__input"
+          type="search"
+          placeholder="Digite um assunto ou palavra-chave..."
+          autocomplete="off"
+          aria-label="Campo de busca"
+        />
+        <button class="overlay-busca__btn-enviar" aria-label="Buscar">🔍</button>
+      </div>
+      <div id="busca-resultados" class="busca-resultados" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="conteudo-principal">
+    <section class="secao-principal">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Você está em:">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Cultura & Arte</span>
+        </nav>
+
+        <h1 class="secao-titulo">Cultura & Entretenimento</h1>
+
+        <div class="layout-com-sidebar">
+          <div>
+            <div class="grade-noticias--duas grade-noticias">
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/noticias.jpg" alt="Bienal de Artes" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--cultura">Exposições</span>
+                  <h2 class="card-noticia__titulo">Bienal Internacional de Artes reúne obras inéditas e 200 mil visitantes</h2>
+                  <p class="card-noticia__resumo">Instalações interativas, mostras de cinema gratuito e oficinas formativas marcam a edição deste ano.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Beatriz Ramos · 02/10/2026</span>
+                    <a href="noticia.html?id=7" class="card-noticia__link">Ler matéria →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/hero.jpg" alt="Cinema nacional" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--cultura">Cinema</span>
+                  <h2 class="card-noticia__titulo">Produção audiovisual brasileira conquista três prêmios em festival europeu</h2>
+                  <p class="card-noticia__resumo">Longa-metragem gravado no interior da Bahia é aclamado por crítica internacional por sua narrativa poética.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Beatriz Ramos · 01/10/2026</span>
+                    <a href="noticia.html?id=7" class="card-noticia__link">Ler matéria →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/noticias.jpg" alt="Literatura e feiras de livros" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--cultura">Literatura</span>
+                  <h2 class="card-noticia__titulo">Feira literária promove lançamentos independentes e debates com autores premiados</h2>
+                  <p class="card-noticia__resumo">Mais de 150 editoras participam de circuito cultural aberto ao público nas praças históricas.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Beatriz Ramos · 29/09/2026</span>
+                    <a href="noticia.html?id=7" class="card-noticia__link">Ler matéria →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card-noticia">
+                <figure class="card-noticia__figura">
+                  <img src="img/tecnologia.jpg" alt="Música e espetáculos" loading="lazy" />
+                </figure>
+                <div class="card-noticia__corpo">
+                  <span class="card-noticia__tag tag--cultura">Música</span>
+                  <h2 class="card-noticia__titulo">Orquestra sinfônica jovem homenageia mestres da música popular brasileira</h2>
+                  <p class="card-noticia__resumo">Concerto especial ao ar livre emociona público de todas as idades com arranjos inéditos.</p>
+                  <div class="card-noticia__rodape">
+                    <span class="card-noticia__autor">Por Beatriz Ramos · 28/09/2026</span>
+                    <a href="noticia.html?id=7" class="card-noticia__link">Ler matéria →</a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <aside class="sidebar">
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Destaques da Semana</h2>
+              <div class="card-mini">
+                <div>
+                  <p class="card-mini__titulo">Mostra de teatro contemporâneo abre inscrições para companhias emergentes</p>
+                  <p class="card-mini__data">03/10/2026</p>
+                </div>
+              </div>
+              <div class="card-mini">
+                <div>
+                  <p class="card-mini__titulo">Patrimônio histórico conclui restauração de museu centenário</p>
+                  <p class="card-mini__data">02/10/2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-bloco">
+              <h2 class="sidebar-bloco__titulo">Editorias Conectadas</h2>
+              <ul class="footer-lista">
+                <li><a href="educacao.html">🎓 Educação & Patrimônio</a></li>
+                <li><a href="noticias.html">📰 Notícias Gerais</a></li>
+                <li><a href="admin.html">⚙️ Área CMS</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grade">
+      <div>
+        <p class="footer-logo">Info<span>Brasil</span></p>
+        <p class="footer-descricao">
+          Jornalismo independente, ágil e comprometido com os fatos. Cobertura diária em múltiplos canais.
+        </p>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 1 a 5</p>
+        <ul class="footer-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="economia.html">Economia</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="politica.html">Política</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 6 a 10</p>
+        <ul class="footer-lista">
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="mundo.html">Mundo</a></li>
+          <li><a href="educacao.html">Educação</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="admin.html">Área CMS (Admin)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Institucional</p>
+        <ul class="footer-lista">
+          <li><a href="contato.html">Fale com a Redação</a></li>
+          <li><a href="admin.html">Painel de Controle</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rodape">
+      <p>© 2026 InfoBrasil. Todos os direitos reservados.</p>
+      <p>Desenvolvido com HTML5 semântico, CSS3 e JavaScript puro.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

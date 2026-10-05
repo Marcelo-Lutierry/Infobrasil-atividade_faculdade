@@ -1,0 +1,14 @@
+# Normalização automática de finais de linha (Windows/Linux/macOS)
+* text=auto eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+
+# Arquivos binários não devem ter finais de linha alterados
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary

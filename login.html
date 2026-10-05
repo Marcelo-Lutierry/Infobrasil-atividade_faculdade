@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InfoBrasil — Autenticação de leitores e administradores do portal." />
+  <title>Entrar — InfoBrasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="InfoBrasil — Página inicial">
+        <div class="logo__icone" aria-hidden="true">IB</div>
+        <span class="logo__texto">Info<span>Brasil</span></span>
+      </a>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul class="nav-principal__lista" role="list">
+          <li><a href="index.html" class="nav-principal__link">🏠 Início</a></li>
+          <li><a href="noticias.html" class="nav-principal__link">📰 Notícias</a></li>
+          <li><a href="economia.html" class="nav-principal__link">📈 Economia</a></li>
+          <li><a href="esportes.html" class="nav-principal__link">⚽ Esportes</a></li>
+          <li><a href="tecnologia.html" class="nav-principal__link">💻 Tecnologia</a></li>
+          <li><a href="politica.html" class="nav-principal__link">🏛️ Política</a></li>
+          <li><a href="cultura.html" class="nav-principal__link">🎭 Cultura</a></li>
+          <li><a href="mundo.html" class="nav-principal__link">🌍 Mundo</a></li>
+          <li><a href="educacao.html" class="nav-principal__link">🎓 Educação</a></li>
+          <li><a href="contato.html" class="nav-principal__link">✉️ Contato</a></li>
+          <li><a href="admin.html" class="nav-principal__link nav-principal__link--admin">⚙️ CMS</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-acoes">
+        <button id="btn-busca" class="btn-busca" aria-label="Abrir busca" title="Buscar notícias">🔍</button>
+        <button id="btn-tema" class="btn-tema" aria-label="Mudar tema" title="Mudar tema">🌙</button>
+        <button id="btn-hamburguer" class="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+          <span class="btn-hamburguer__linha"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="overlay-busca" class="overlay-busca" role="dialog" aria-modal="true" aria-label="Buscar notícias" aria-hidden="true">
+    <div class="overlay-busca__caixa">
+      <button id="btn-fechar-busca" class="overlay-busca__fechar" aria-label="Fechar busca">✕</button>
+      <p class="overlay-busca__titulo">Buscar notícias</p>
+      <div class="overlay-busca__campo">
+        <input
+          id="input-busca-global"
+          class="overlay-busca__input"
+          type="search"
+          placeholder="Digite um assunto ou palavra-chave..."
+          autocomplete="off"
+          aria-label="Campo de busca"
+        />
+        <button class="overlay-busca__btn-enviar" aria-label="Buscar">🔍</button>
+      </div>
+      <div id="busca-resultados" class="busca-resultados" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="conteudo-principal">
+    <div class="container">
+
+      <div class="login-container-pagina">
+
+        <div class="login-abas" role="tablist">
+          <button id="aba-btn-leitor" class="login-aba-btn ativo" role="tab" aria-selected="true">
+            👤 Leitor
+          </button>
+          <button id="aba-btn-admin" class="login-aba-btn" role="tab" aria-selected="false">
+            ⚙️ Administrador
+          </button>
+        </div>
+
+        <div id="painel-login-leitor">
+          <div class="login-banner-perfil">
+            <div class="login-banner-icone login-banner-icone--leitor">📖</div>
+            <h1 class="titulo-cms-login">Portal do Leitor</h1>
+            <p class="subtitulo-cms-login">
+              Faça login para interagir com as matérias, deixar comentários e curtir publicações.
+            </p>
+          </div>
+
+          <form id="form-login-leitor">
+            <div class="form-grupo form-grupo--alinhamento-esquerda">
+              <label for="leitor-usuario" class="form-rotulo">Usuário ou E-mail</label>
+              <input type="text" id="leitor-usuario" class="form-input" placeholder="leitor" value="leitor" required />
+            </div>
+
+            <div class="form-grupo form-grupo--alinhamento-esquerda">
+              <label for="leitor-senha" class="form-rotulo">Senha</label>
+              <input type="password" id="leitor-senha" class="form-input" placeholder="leitor123" value="leitor123" required />
+            </div>
+
+            <button type="submit" class="btn-primario btn-largura-total">Entrar como Leitor 👤</button>
+          </form>
+
+          <div class="cms-login-dica">
+            <strong>Credenciais do Leitor:</strong><br />
+            Usuário: <code>leitor</code> | Senha: <code>leitor123</code>
+          </div>
+        </div>
+
+        <div id="painel-login-admin" class="oculto">
+          <div class="login-banner-perfil">
+            <div class="login-banner-icone login-banner-icone--admin">⚙️</div>
+            <h1 class="titulo-cms-login">Redação & CMS</h1>
+            <p class="subtitulo-cms-login">
+              Acesso exclusivo para administradores publicarem e editarem matérias.
+            </p>
+          </div>
+
+          <form id="form-login-admin-painel">
+            <div class="form-grupo form-grupo--alinhamento-esquerda">
+              <label for="admin-usuario" class="form-rotulo">Usuário Administrador</label>
+              <input type="text" id="admin-usuario" class="form-input" placeholder="admin" value="admin" required />
+            </div>
+
+            <div class="form-grupo form-grupo--alinhamento-esquerda">
+              <label for="admin-senha" class="form-rotulo">Senha</label>
+              <input type="password" id="admin-senha" class="form-input" placeholder="admin123" value="admin123" required />
+            </div>
+
+            <button type="submit" class="btn-primario btn-largura-total">Acessar Painel CMS 🚀</button>
+          </form>
+
+          <div class="cms-login-dica">
+            <strong>Credenciais do Administrador:</strong><br />
+            Usuário: <code>admin</code> | Senha: <code>admin123</code>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grade">
+      <div>
+        <p class="footer-logo">Info<span>Brasil</span></p>
+        <p class="footer-descricao">
+          Jornalismo independente, ágil e comprometido com os fatos. Cobertura diária em múltiplos canais.
+        </p>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 1 a 5</p>
+        <ul class="footer-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="economia.html">Economia</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="politica.html">Política</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Caminhos 6 a 10</p>
+        <ul class="footer-lista">
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="mundo.html">Mundo</a></li>
+          <li><a href="educacao.html">Educação</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="admin.html">Área CMS (Admin)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-titulo">Institucional</p>
+        <ul class="footer-lista">
+          <li><a href="contato.html">Fale com a Redação</a></li>
+          <li><a href="admin.html">Painel de Controle</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rodape">
+      <p>© 2026 InfoBrasil. Todos os direitos reservados.</p>
+      <p>Desenvolvido com HTML5 semântico, CSS3 e JavaScript puro.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
